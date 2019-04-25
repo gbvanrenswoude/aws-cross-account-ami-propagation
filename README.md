@@ -8,7 +8,7 @@ declare -r TARGET_ENCRYPTION_KEY_ALIAS="propagation "
 
 # ami metadata
 To keep metadata (like marketplace billing code)
-create volume from snapshot in target account
-launch an instance
-swap volume
-create image
+- create volume from snapshot in target account
+- launch an instance
+- swap volume
+- create image

@@ -1,0 +1,32 @@
+---
+platform: linux
+
+inputs:
+- name: source-ami  
+- name: script
+
+image_resource:
+  type: docker-image
+  source:
+    repository: zzzzzzzz.dkr.ecr.eu-west-1.amazonaws.com/toolbox
+
+params:
+  AMI_NAME:
+  AMI_ID:
+  AMI_FILE:
+  SOURCE_ACCOUNT:
+  TARGET_ACCOUNT:
+  ENA: false
+  BILLING_PRODUCT:
+
+run:
+  path: /bin/bash
+  args:
+    - -exc
+    - |
+
+      #!/bin/bash
+      chmod 750 script/run.sh
+      ./script/run.sh
+outputs:
+- name: propagated-ami

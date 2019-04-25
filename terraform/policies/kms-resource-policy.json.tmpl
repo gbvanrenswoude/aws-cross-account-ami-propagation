@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Id": "key-policy-some-admin",
+  "Statement": [
+    {
+      "Sid": "Allow access for Key Administrators",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::${accountid}:role/some-admin"
+      },
+      "Action": [
+        "kms:*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
